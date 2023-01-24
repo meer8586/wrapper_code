@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myproject
+
+spec:
+  containers:
+  - name: myproject
+    image: meer86/wrapper:wrapper_k8s
+    imagePullPolicy: Always
+    env:
+      - name: COUNTT
+        valueFrom:
+          configMapKeyRef: 
+            name: myconfig
+            key: count
+    args: ["$(COUNTT)"]
+  restartPolicy: OnFailure
+#120 sec
