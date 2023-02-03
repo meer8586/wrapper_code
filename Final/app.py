@@ -9,7 +9,7 @@ try:
     input_path = "./"
     path = os.path.join(input_path)
     date_time1=str(datetime.datetime.now().strftime("%d%m%Y%H%M%S"))
-    newfilename1 = "wrapper"#_"+date_time1
+    newfilename1 = "wrapper_"+date_time1
     
     output_path = os.path.join(path, newfilename1)
     print(output_path)    
