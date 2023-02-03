@@ -2,9 +2,7 @@ FROM ubuntu:20.04
 USER root
 WORKDIR /
 COPY . .
-RUN mkdir wrapper \
- && chown -R :root /wrapper \
- && chmod -R 0775 /wrapper
+
 
 RUN apt-get update
 RUN apt-get install -y software-properties-common
